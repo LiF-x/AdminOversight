@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "AdminOversight",
+  "name": "AdminOversight",
+  "version": "1.1.4",
+  "description": "Admin oversight system — surfaces admin actions in chat for player transparency.",
+  "authors": ["Christophe Roblin", "Warped Ibun"],
+  "loadOrderHint": 100,
+  "files": {
+    "overlay": [
+      { "src": "mod.cs", "dest": "mods/AdminOversight/mod.cs" }
+    ],
+    "dataPatches": []
+  }
+}
