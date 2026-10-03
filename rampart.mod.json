@@ -1,14 +1,35 @@
 {
   "schemaVersion": 1,
   "id": "AdminOversight",
-  "name": "AdminOversight",
+  "name": "Admin Oversight",
   "version": "1.1.4",
   "description": "Admin oversight system — surfaces admin actions in chat for player transparency.",
-  "authors": ["Christophe Roblin", "Warped Ibun"],
-  "loadOrderHint": 100,
+  "authors": [
+    "Christophe Roblin",
+    "Warped Ibun"
+  ],
+  "source": {
+    "repo": "LiF-x/AdminOversight",
+    "commit": "f80decbba9ee77092a5f2cb4d70ca134f04cf9d3"
+  },
+  "baseline": {
+    "gameBuild": "sha256:d47ef6156423f1226b6d07a1f31f81d3aa94bc460cc1ac76bcf7d7ef9c305d4a",
+    "steamBuildId": "11261643"
+  },
+  "license": "GPL-3.0-only",
+  "distribution": "hostable",
+  "dependencies": [
+    "LiF-x/ServerAutoloader",
+    "LiF-x/ServerUtility"
+  ],
+  "loadOrderHint": 200,
+  "loadOrderNote": "Observes other mods' state: it polls the GM action log and installs a trigger on the TTmod rcon schedule table, so it must load after the mods whose actions it reports.",
   "files": {
     "overlay": [
-      { "src": "mod.cs", "dest": "mods/AdminOversight/mod.cs" }
+      {
+        "src": "mod.cs",
+        "dest": "mods/AdminOversight/mod.cs"
+      }
     ],
     "dataPatches": []
   }
